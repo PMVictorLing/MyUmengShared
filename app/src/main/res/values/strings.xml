@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">我的友盟分享 bugly fixed</string>
+
+    <string-array name="share_array">
+        <item>朋友圈</item>
+        <item>微信好友</item>
+        <item>新浪微博</item>
+        <!--<item>腾讯微博</item>-->
+        <item>QQ空间</item>
+    </string-array>
+    <string-array name="share_packager_name">
+        <item>com.tencent.mm</item>
+        <item>com.tencent.mm</item>
+        <item>com.sina.weibo</item>
+        <!--<item>com.tencent.WBlog</item>-->
+        <item>com.tencent.mobileqq</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ChangeTextViewFragment">
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/red"
+        android:background="@drawable/ui_shape_bg"
+        android:text="首页" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/status_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_text"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@color/darkolivegreen"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="10dp"
+        app:contentPadding="5dp"
+        android:foreground="?attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="即将到期"
+            android:textColor="@android:color/white"
+            android:textSize="10sp" />
+    </android.support.v7.widget.CardView>
+
+
+    <com.umengshared.lwc.myumengshared.activity.definedview.LoadingView
+        android:id="@+id/view_LoadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.umengshared.lwc.myumengshared.activity.definedview.LoadingCircleView
+        android:id="@+id/vw_circle_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <com.umengshared.lwc.myumengshared.activity.definedview.LetterSideBar
+        android:id="@+id/lb_letterbar"
+        android:layout_gravity="left"
+        android:padding="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

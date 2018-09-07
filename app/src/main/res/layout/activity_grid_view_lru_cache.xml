@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.LruCachePractice.GridViewLruCacheActivity">
+
+    <include layout="@layout/title_bar_layout"/>
+
+    <GridView
+        android:id="@+id/gv_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp">
+    </GridView>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.ZhiBoFragment">
+
+    <Button
+        android:id="@+id/bt_zhibo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="直播item"/>
+
+    <TextView
+        android:id="@+id/chat_send_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:gravity="center_vertical"
+        android:lineSpacingMultiplier="1.1"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:autoLink="web|phone"
+        android:paddingRight="18dp"
+        android:paddingTop="12dp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:typeface="sans"
+        android:text="打开网页：www.baidu.com"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web|phone"
+        android:text="拨打电话：123456"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/re_bg"
+        android:dividerHeight="1dp">
+
+    </ListView>
+
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".fragment.ChangeTextViewFragment">
+
+   <com.umengshared.lwc.myumengshared.activity.definedview.ShapeLoadlingView
+       android:id="@+id/shape_loading_view"
+       android:layout_width="30dp"
+       android:layout_height="30dp"
+       android:layout_marginBottom="80dp">
+
+   </com.umengshared.lwc.myumengshared.activity.definedview.ShapeLoadlingView>
+
+
+   <View
+       android:id="@+id/shape_shadow_view"
+       android:background="@drawable/ui_shape_bg"
+       android:layout_width="30dp"
+       android:layout_height="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="正在拼命的加载..."/>
+
+</LinearLayout>

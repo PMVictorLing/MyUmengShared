@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>js调用</title>
+
+    // JS代码
+    <script>
+ // Android需要调用的方法
+     function callJS(){
+     alert("Android调用了JS的callJS方法");
+      }
+
+       function callJSArg(arg){
+     alert("Android调用了JS的callJS方法,并传参数："+arg);
+      }
+
+      function callAndroid(arg){
+      // 由于对象映射，所以调用test对象等于调用Android映射的对象
+      test.showTest(arg)
+      }
+    </script>
+
+</head>
+
+<body>
+this is my html<br/>
+//点击按钮则调用callAndroid函数
+<button type="button" id="button1" onclick="callAndroid('点击调用java代码,并传递参数666')">点击调用java代码,并传递参数666</button>
+<br/>
+<div>内容显示：</div>
+</body>
+</html>

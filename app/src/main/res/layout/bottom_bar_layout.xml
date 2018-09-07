@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:id="@+id/rg_bottom_group">
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="首页"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@drawable/btn_tabbar_home_selector"
+            android:textColor="@color/tab_text_color"
+            android:textSize="14sp"
+            android:drawablePadding="4dp"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rb_zhibo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="直播"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@drawable/btn_tabbar_zhibo_selector"
+            android:textColor="@color/tab_text_color"
+            android:textSize="14sp"
+            android:drawablePadding="4dp" />
+
+
+        <RadioButton
+            android:id="@+id/rb_guanzhu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="关注"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@drawable/btn_tabbar_guanzhu_selector"
+            android:textColor="@color/tab_text_color"
+            android:textSize="14sp"
+            android:drawablePadding="4dp" />
+
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="我的"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@drawable/btn_tabbar_wode_selector"
+            android:textColor="@color/tab_text_color"
+            android:textSize="14sp"
+            android:drawablePadding="4dp" />
+
+
+    </RadioGroup>
+
+</LinearLayout>

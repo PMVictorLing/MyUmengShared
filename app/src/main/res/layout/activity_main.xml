@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/viewBackground"
+    tools:context=".activity.ZTNHMainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- titlebar-->
+            <include layout="@layout/title_bar_main_layout"/>
+
+            <!-- 主页页面 -->
+            <FrameLayout
+                android:id="@+id/fl_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            </FrameLayout>
+
+            <include layout="@layout/bottom_bar_layout"/>
+        </LinearLayout>
+
+        <!-- 菜单页 -->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            android:background="@color/colorPrimary"
+            app:headerLayout="@layout/layout_header_main"
+            app:menu="@menu/activity_main_drawer"/>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

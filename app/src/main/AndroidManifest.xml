@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.umengshared.lwc.myumengshared">
+
+    <!-- 友盟权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <!-- 读联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- tinker 权限 start -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 注释相同权限 -->
+    <!--
+<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    -->
+    <!-- tinker 权限 end -->
+
+
+    <!-- 弹框 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UmengSharedActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57de35a467e58e2669001604" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" />
+
+        <activity android:name=".activity.SendActivity" />
+
+        <!-- 微信平台 -->
+        <!--
+            <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- QQ -->
+        <!--
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1105627227" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1105627227" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 新浪微博 -->
+        <!--
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" />
+
+        <!-- tinker 接入 start -->
+        <!--
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        -->
+
+
+        <!-- tinker 接入 end -->
+        <activity
+            android:name=".activity.ZTNHMainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.JavaCallJsActivity" />
+        <activity android:name=".permissions.PermissionsCheckActivity" />
+        <activity android:name=".permissions.TestPermissionsActivity" />
+
+        <!-- 权限activity 空白、透明设置 -->
+        <activity
+            android:name=".permissions.permission.AcpActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity android:name=".http.HttpUrlConnectionTestActivity" />
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false" />
+        <service
+            android:name=".Tools.DownLoadTools.DownLoadFileService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!-- 静态注册网络广播 -->
+        <!--
+            <receiver
+            android:name=".receiver.NetworkChangedReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+        -->
+        <activity android:name=".activity.ZhiBoDetailsActivity" />
+        <!-- fragment pad练习 -->
+        <activity android:name=".activity.fragmentpractice.NewsMainActivity">
+
+            <!--
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".activity.fragmentpractice.NewContentActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.umengshared.lwc.myumengshared.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".activity.SplashScreenActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".activity.LruCachePractice.GridViewLruCacheActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <!-- 自定义view 文字改变颜色 58属性动画 加载动画 -->
+        <activity android:name=".activity.definedview.ChangeTextViewPagerActivity">
+        </activity>
+
+        <!-- 仿QQ6.0 菜单侧滑效果-->
+        <activity android:name=".activity.definedview.MenuMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleView">
+        <attr name="circle_backgroud_color" format="color"/>
+    </declare-styleable>
+
+
+    <!--name 定义View的名字 MyTextView-->
+    <declare-styleable name="MyTextViewTest">
+        <!--name 属性名称
+            format 格式：string 文字   color 颜色
+                         demension 宽高 字体大小
+                         integer    数字
+                         reference  资源（drawable）-->
+
+        <attr name="my_text_test" format="string"/>
+        <attr name="text_color_test" format="color"/>
+        <attr name="text_size_test" format="dimension"/>
+        <attr name="maxLength" format="integer"/>
+        <attr name="backgrouds" format="reference"/>
+
+        <!-- 枚举 -->
+       <!-- <attr name="inputType">
+            <enum name="number" value="1"/>
+            <enum name="text" value="2"/>
+            <enum name="password" value="3"/>
+        </attr>-->
+
+    </declare-styleable>
+
+</resources>

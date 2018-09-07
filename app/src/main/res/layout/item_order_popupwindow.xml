@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/tv_order_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="退款原因"
+        android:textSize="@dimen/tv_size_main"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_e3e3e3"/>
+
+    <ListView
+        android:id="@+id/ry_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="关闭"
+        android:textSize="@dimen/tv_size_main"
+        android:textColor="@color/white"
+        android:background="@color/color_d11818"
+        android:gravity="center_horizontal"
+        android:padding="10dp"/>
+    
+    
+</LinearLayout>

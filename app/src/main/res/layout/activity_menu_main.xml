@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.umengshared.lwc.myumengshared.activity.definedview.QQSlidingMenu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lwc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    lwc:rightMargin="62dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_personal_center"
+    android:id="@+id/qq_sliding_menu"
+    tools:context=".activity.definedview.MenuMainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <include layout="@layout/qq_item_menu_layout"/>
+
+        <include layout="@layout/qq_item_main_layout"/>
+
+    </LinearLayout>
+
+</com.umengshared.lwc.myumengshared.activity.definedview.QQSlidingMenu>
